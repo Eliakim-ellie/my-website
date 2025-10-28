@@ -53,7 +53,7 @@ function Hero() {
                     <div className="hero-image">
                         <div className="image-container">
                             <img 
-                                src="/image.jpg" 
+                                src={`${process.env.PUBLIC_URL}/images/image.jpg`}  
                                 alt="silent_debugger - Frontend Developer"
                                 className="profile-photo"
                             />

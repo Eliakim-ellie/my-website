@@ -54,10 +54,10 @@ function Projects() {
             title: 'Portfolio Website',
             description: 'Modern portfolio website with smooth animations, responsive design, and optimized performance.',
             image: '/projects/portfolio.jpg',
-            technologies: ['React', 'GSAP', 'CSS3', 'Framer Motion'],
+            technologies: ['React',  'CSS3', 'Framer Motion'],
             category: 'frontend',
-            liveLink: 'https://example.com',
-            githubLink: 'https://github.com/example',
+            liveLink: 'https://walela.netlify.app/',
+            githubLink: "https://github.com/Eliakim-ellie/my-website.git",
             featured: false
         },
         {
@@ -168,7 +168,7 @@ function Projects() {
                 <div className="github-cta">
                     <p>Want to see more of my work?</p>
                     <a 
-                        href="https://github.com/yourusername" 
+                        href="https://github.com/Eliakim-ellie" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="btn btn-primary"

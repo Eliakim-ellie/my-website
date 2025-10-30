@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './Contact.css';
+import emailjs from '@emailjs/browser';
+
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -18,20 +20,37 @@ function Contact() {
         });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setIsSubmitting(true);
-        
-        // Simulate form submission
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setSubmitStatus('success');
-            setFormData({ name: '', email: '', subject: '', message: '' });
-            
-            // Reset status after 5 seconds
-            setTimeout(() => setSubmitStatus(null), 5000);
-        }, 2000);
-    };
+   const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const { name, email, subject, message } = formData;
+
+  emailjs
+    .send(
+      'service_xpcfyey',     
+      'template_dffpmvd',   
+      {
+        user_name: name,
+        user_email: email,
+        subject: subject,
+        message: message,
+      },
+      '67iOSwKRdF2-232ZQ'              
+    )
+    .then(() => {
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setSubmitStatus(null), 5000);
+    })
+    .catch((error) => {
+      setIsSubmitting(false);
+      console.error('Email failed to send:', error);
+      setSubmitStatus('error');
+    });
+};
+
 
     const contactInfo = [
         {

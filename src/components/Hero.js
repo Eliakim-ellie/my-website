@@ -16,7 +16,7 @@ function Hero() {
                         </h2> 
                         <p className="hero-description">
                             I create beautiful, responsive, and user-friendly web experiences 
-                            using modern technologies.Passionate about clean code and 
+                            using modern technologies. Passionate about clean code and 
                             innovative solutions.
                         </p>
                         
@@ -98,3 +98,7 @@ function Hero() {
 }
 
 export default Hero;
+
+
+
+// Updated contact info for testing contribution

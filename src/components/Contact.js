@@ -36,7 +36,7 @@ function Contact() {
         subject: subject,
         message: message,
       },
-      '67iOSwKRdF2-232ZQ'              
+      'public_67iOSwKRdF2-232ZQ'              
     )
     .then(() => {
       setIsSubmitting(false);
